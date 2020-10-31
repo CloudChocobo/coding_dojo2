@@ -36,8 +36,10 @@ public final class App {
                 "six hundred", "seven hundred", "eight hundred", "nine hundred" };
         int dizainePilePoil = diviserPuisMultiplierPar10LEntier(chiffreDepart);
         int centainePilePoil = diviserPuisMultiplierPar100LEntier(chiffreDepart);
-  
-      
+
+        if (chiffreDepart >220 && chiffreDepart != centainePilePoil && chiffreDepart != dizainePilePoil) {
+            return centaines[chiffreDepart / 100 - 1] + " and " + dizaines[(chiffreDepart-200) /10 -1] + " " + deZeroAVingt[chiffreDepart - dizainePilePoil];
+        }
 
         if (chiffreDepart>220 && cEstUneDizaine(chiffreDepart - 100) && chiffreDepart != centainePilePoil) {
             return centaines[chiffreDepart / 100 - 1] + " and " + dizaines[(chiffreDepart-200) /10 -1];
