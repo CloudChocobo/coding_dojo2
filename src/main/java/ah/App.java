@@ -27,7 +27,11 @@ public final class App {
         return false;
     }
 
-    public static String convert(int chiffreDepart) {
+    public static String convert(String montant) {
+        return convert2(Integer.valueOf(montant.substring(0, montant.length() - 1))) + " dollars"; // on ne garde que les chiffres et pas le $
+    }
+
+    private static String convert2(int chiffreDepart) {
         String[] deZeroAVingt = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
                 "twenty" };
