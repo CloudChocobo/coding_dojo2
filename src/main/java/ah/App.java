@@ -27,6 +27,11 @@ public final class App {
         return false;
     }
 
+
+
+
+
+
     public static String convert(String montant) {
         return convert2(Integer.valueOf(montant.substring(0, montant.length() - 1))) + " dollars"; // on ne garde que les chiffres et pas le $
     }
@@ -93,4 +98,38 @@ public final class App {
         return number / 100 * 100;
     }
 
+	public static String fooBarQix(int number) {
+    
+        String FBQ = Integer.toString(number);   
+          
+        if (number % 3 == 0 && number > 3 ) {
+            return "FooFoo";
+        }   
+        if (number % 5 == 0 && number > 5) {
+            return "BarBar";
+        }
+        if (number == 0) {
+            return "";
+        }
+      
+        if (number % 3 == 0) {
+            return "Foo";
+        }
+
+         if (number % 5 == 0) {
+            return "Bar";
+        }
+
+        if (number % 7 == 0) {
+            return "Qix";
+        }
+      
+
+       
+        return FBQ;
+	}
+
+
+
+   
 }

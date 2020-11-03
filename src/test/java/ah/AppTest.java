@@ -60,4 +60,18 @@ public class AppTest {
 
     }
 
+ @Test
+
+ public void test0() {
+    assertEquals("", App.fooBarQix(0));
+    assertEquals("Foo", App.fooBarQix(3));
+    assertEquals("Bar", App.fooBarQix(5));
+    assertEquals("Qix", App.fooBarQix(7));
+    assertEquals("FooFoo", App.fooBarQix(33));
+    assertEquals("BarBar", App.fooBarQix(25));
+
+    
+
+ }
+
 }
